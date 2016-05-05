@@ -1,0 +1,33 @@
+<div ng-controller="homec">
+  <h1>Your name:  shang</h1>
+   <a href="#/select">我要注销 </a>
+  <div style="height: 20px"><a href="#/student/add" type="button" class="btn btn-info col-sm-2 col-sm-offset-10">新增</a></div>
+  <br>
+  <table class="table table-hover" style="border: 1px bisque solid">
+    <thead>
+      <tr>
+        <th>序号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>年龄</th>
+        <th>手机号</th>
+        <th>地址</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="stu in stus">
+        <td>{{$index+1}}</td>
+        <td>{{stu.name}}</td>
+        <td>{{stu.sex}}</td>
+        <td>{{stu.age}}</td>
+        <td>{{stu.mobil}}</td>
+        <td>{{stu.address}}</td>
+        <td>
+          <a href="#/student/update/{{stu._id}}"  >修改</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="javascript:" ng-click="delete(stu._id)">删除</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,41 @@
+<style type="text/css">
+	.m15{ margin: 15px;}
+	.tc{ text-align: center;font-size: 18px;font-weight: 600;}
+</style>
+
+<div class="container" ng-controller="loginc">
+		<form class="col-sm-offset-4 col-sm-4 form-horizontal" ng-submit="submit()" role="form">
+			<fieldset>
+				<legend></legend>
+				<div class="panel panel-default">
+				<div class="panel-heading">
+					<p class="tc">请先登录</p>
+				</div>
+				<div class="panel-body m15">
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">
+						<span class="glyphicon glyphicon-user"></span>
+						</span>
+						<input type="text" class="form-control" id="username" name="username" ng-model="user.username" placeholder="请输入用户名" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">
+						<span class="glyphicon glyphicon-lock"></span>
+						</span>
+						<input type="text" class="form-control" id="password" name="password" ng-model="user.password" placeholder="请输入密码" required>
+					</div>
+				</div>
+				<div class="form-group">
+						<button type="submit" class="btn btn-primary btn-block" id="login0">登录</button>
+				</div>
+				<div class="form-group">
+						<a type="button" class="btn btn-info col-sm-2 col-sm-offset-10" href="#/register" >注册</a>
+				</div>
+				</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>

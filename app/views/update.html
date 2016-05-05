@@ -1,0 +1,79 @@
+<style type="text/css">
+    .m15 {
+        margin: 15px;
+    }
+
+    .tc {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+    }
+</style>
+<div class="container" ng-controller="updatec">
+    <form class="col-sm-offset-4 col-sm-4 form-horizontal" role="form" ng-submit="update()">
+        <fieldset>
+            <legend></legend>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p class="tc">修改</p>
+                </div>
+                <div class="panel-body m15">
+                    <div class="form-group">
+                        <div class="input-group">
+						<span class="input-group-addon">
+						<span class="glyphicon">姓名</span>
+						</span>
+                            <input type="text" class="form-control" ng-model="student.name" placeholder="请输入姓名" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+						<span class="input-group-addon">
+						<span class="glyphicon">性别 </span>
+						</span>
+                            &nbsp;
+                            <label class="radio-inline">
+                                <input type="radio" name="sex" ng-model="student.sex" value="男" ng-checked="{{student.sex=='男'?true:false}}">男
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="sex" ng-model="student.sex" value="女" ng-checked="{{student.sex=='女'?true:false}}">女
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+						<span class="input-group-addon">
+						<span class="glyphicon">年龄</span>
+						</span>
+                            <input type="text" class="form-control" ng-model="student.age" placeholder="请输入年龄"  required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+						<span class="input-group-addon">
+						<span class="glyphicon">手机</span>
+						</span>
+                            <input type="text" class="form-control" ng-model="student.mobil" placeholder="请输入手机"
+                                   required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+						<span class="input-group-addon">
+						<span class="glyphicon">地址</span>
+						</span>
+                            <input type="text" class="form-control" ng-model="student.address" placeholder="请输入地址"
+                                   required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block" id="register1">修改</button>
+                    </div>
+
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+
